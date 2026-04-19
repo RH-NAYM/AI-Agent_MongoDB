@@ -1,6 +1,6 @@
 # 🤖 Retail AI Agent System with MongoDB
 
-[![dev branch](https://img.shields.io/badge/branch-dev-red?style=flat&logo=git&logoColor=white)](https://github.com/RH-NAYM/AI-Agent_MongoDB/tree/dev)
+[![main branch](https://img.shields.io/badge/branch-main-red?style=flat&logo=git&logoColor=white)](https://github.com/RH-NAYM/AI-Agent_MongoDB/tree/main)
 
 <p align="center">
   <a href="https://opencv.org/" target="_blank">
