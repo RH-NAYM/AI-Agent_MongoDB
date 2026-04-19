@@ -130,7 +130,6 @@ ai_agent_system/
 ├── requirements.txt
 └── README.md
 ```
-
 ---
 
 ## MongoDB Collections
@@ -214,6 +213,7 @@ ai_agent_system/
 ```bash
 # MongoDB
 yay -S mongodb-bin
+yay -S mongodb-compass-bin # Use mongodb compass for compass use in local machine
 sudo systemctl start mongodb
 
 # Ollama

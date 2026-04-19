@@ -26,6 +26,7 @@ from app.services.logging_service import configure_structlog
 from app.services.embedding_service import get_embedding_service
 
 log = structlog.get_logger(__name__)
+print(log)
 settings = get_settings()
 
 

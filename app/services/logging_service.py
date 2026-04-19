@@ -19,14 +19,16 @@ log = structlog.get_logger(__name__)
 
 def configure_structlog(level: str = "INFO") -> None:
     import logging
+
     logging.basicConfig(
         format="%(message)s",
         level=getattr(logging, level.upper(), logging.INFO),
     )
+
     structlog.configure(
         processors=[
-            structlog.stdlib.add_log_level,
-            structlog.stdlib.add_logger_name,
+            structlog.contextvars.merge_contextvars,
+            structlog.processors.add_log_level,
             structlog.processors.TimeStamper(fmt="iso"),
             structlog.processors.StackInfoRenderer(),
             structlog.processors.format_exc_info,
@@ -36,6 +38,7 @@ def configure_structlog(level: str = "INFO") -> None:
             getattr(logging, level.upper(), logging.INFO)
         ),
         logger_factory=structlog.PrintLoggerFactory(),
+        cache_logger_on_first_use=True,
     )
 
 
